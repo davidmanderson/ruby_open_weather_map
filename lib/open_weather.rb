@@ -9,6 +9,8 @@ module OpenWeather
   autoload :History,       'open_weather/history'
   autoload :VERSION,       'open_weather/version'
 
+  mattr_accessor :api_key
+
   require 'open_weather/api.rb'
   require 'open_weather/exceptions.rb'
 end

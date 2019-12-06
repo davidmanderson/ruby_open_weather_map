@@ -35,6 +35,8 @@ module OpenWeather
         options.delete(:country)
       end
 
+      options[:APPID] = OpenWeather.api_key if options[:APPID].nil?
+      
       options
     end
 
@@ -50,6 +52,7 @@ module OpenWeather
       url       = url || @url
       uri       = URI(url)
       uri.query = URI.encode_www_form(options)
+      
       Net::HTTP.get(uri)
     end
   end
