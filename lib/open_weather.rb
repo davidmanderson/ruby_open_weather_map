@@ -7,6 +7,7 @@ module OpenWeather
   autoload :ForecastDaily, 'open_weather/forecast_daily'
   autoload :Find,          'open_weather/find'
   autoload :History,       'open_weather/history'
+  autoload :Onecall,      'open_weather/onecall'
   autoload :VERSION,       'open_weather/version'
 
   mattr_accessor :api_key
